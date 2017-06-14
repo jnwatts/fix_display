@@ -15,17 +15,17 @@ The script expects to find the config file at: $XDG_CONFIG_DIR/fix_display.json
     "configurations": {
         "docked_closed": {
             "outputs": ["DP-0", "DP-1"],
-            "command": "xrandr --output eDP-1-1 --off --output DP-0 --auto --output DP-1 --auto --right-of DP-0; feh --bg-tile ~/Documents/Backgrounds/kenblock_nz_5280x1080.png"
+            "command": "xrandr --output eDP-1-1 --off --output DP-0 --auto --output DP-1 --auto --right-of DP-0; feh --bg-tile ~/Documents/Backgrounds/5280x1080.png"
         },
         "docked_open": {
             "outputs": ["DP-0", "DP-1", "eDP-1-1"],
             "transition_output": "eDP-1-1",
-            "command": "xrandr --output DP-0 --primary --auto --pos 1440x0 --output DP-1 --auto --pos 3360x0; xrandr --output eDP-1-1 --mode 1440x900; feh --bg-tile ~/Documents/Backgrounds/kenblock_nz_5280x1080.png"
+            "command": "xrandr --output DP-0 --primary --auto --pos 1440x0 --output DP-1 --auto --pos 3360x0; xrandr --output eDP-1-1 --mode 1440x900; feh --bg-tile ~/Documents/Backgrounds/5280x1080.png"
         },
         "mobile": {
             "outputs": ["eDP-1-1"],
             "transition_output": "eDP-1-1",
-            "command": "xrandr --output eDP-1-1 --primary --mode 1920x1080; feh --bg-tile ~/Documents/Backgrounds/kenblock_nz_1920x1080.png"
+            "command": "xrandr --output eDP-1-1 --primary --mode 1920x1080; feh --bg-tile ~/Documents/Backgrounds/1920x1080.png"
         }
     }
 }
