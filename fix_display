@@ -10,10 +10,6 @@ def shell(cmd):
 
 class State:
     def __init__(self):
-        self.active = []
-        self.connected = []
-
-    def update(self):
         cmd = "xrandr | grep \" connected\" | sed -e \"s/\\([A-Z0-9]\\+\\) connected.*/\\1/\" | sed 's/ *$//'"
         self.connected = set(shell(cmd).strip().split("\n"))
 
@@ -44,7 +40,6 @@ with open(config_file, "r") as f:
     config = Config(**(json.load(f)))
 
 state = State()
-state.update()
 
 print("Connected outputs: {}".format(state.connected))
 print("Active outputs: {}".format(state.active))
